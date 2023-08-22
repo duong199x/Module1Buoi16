@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Quản lí thông tin sinh viên</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Student {
+        ten;
+        tuoi;
+        arr;
+
+        constructor(tenInput, tuoiInput, arrInput) {
+            this.ten = tenInput;
+            this.tuoi = tuoiInput;
+            this.arr = arrInput;
+        }
+
+
+        getTrungBinh() {
+            let tong = 0;
+            for (let i = 0; i < this.arr.length; i++) {
+                tong += this.arr[i];
+            }
+            return tong / this.arr.length;
+        }
+
+        ThongTin() {
+            return `ten: ${this.ten} /tuoi: ${this.tuoi} /Diem trung binh ${this.getTrungBinh()}`
+        }
+
+        setName(nameInput) {
+            this.ten = nameInput;
+        }
+
+        compareAvg(student) {
+            if (this.getTrungBinh() > student.getTrungBinh()) {
+                return this.ThongTin()
+            } else {
+                return student.ThongTin();
+            }
+        }
+    }
+
+    let hocSinh1 = new Student('Duong', 24, [7, 10, 8, 5])
+    console.log(hocSinh1.getTrungBinh())
+    let hocSinh2 = new Student('Nam', 25, [7, 8, 9, 7])
+    console.log(hocSinh2.getTrungBinh())
+    console.log(hocSinh1.compareAvg(hocSinh2))
+</script>
+</html>

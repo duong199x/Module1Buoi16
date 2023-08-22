@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+
+</body>
+<script>
+    // class Oto {
+    //     ten;
+    //     dong;
+    //     canNang;
+    //     mauSac;
+    //
+    //     constructor(tenInput, dongInput, canNangInput, mauSacInput) {
+    //         this.ten = tenInput;
+    //         this.dong = dongInput;
+    //         this.canNang = canNangInput;
+    //         this.mauSac = mauSacInput;
+    //     }
+    //
+    //     start() {
+    //         console.log(this.ten + 'chay')
+    //         //this đại diện cho đối tượng đang sử dụng.
+    //     }
+    // }
+    //
+    // let bmw = new Oto('Bmw', 400, 500, 'trang');
+    // let audi = new Oto('Audi', 500, 600, 'den');
+    // console.log(bmw.mauSac);// truy xuất thuộc tính của đối tượng.
+    // bmw.start(); // truy xuất phương thức của đối tượng.
+    // console.log(audi.mauSac);
+    // audi.start();
+    class HinhChuNhat {
+        chieuDai;
+        chieuRong;
+        S;
+        C;
+
+        constructor(chieuDaiInput, chieuRongInput) {
+            this.chieuDai = chieuDaiInput;
+            this.chieuRong = chieuRongInput;
+        }
+
+        dienTich() {
+            this.S = this.chieuDai * this.chieuRong;
+            return this.S
+        }
+
+        chuVi() {
+            this.C =(this.chieuDai + this.chieuRong) * 2;
+            return this.C
+        }
+        getInfo(){
+            let data = `hcn có chiều dài ${this.chieuDai}, chiều rộng ${this.chieuRong}, có diện tích ${this.S} và chu vi ${this.C}`
+            return data
+        }
+    }
+
+    let hcn1 = new HinhChuNhat(24, 12);
+    hcn1.getInfo()
+
+    let hcn2 = new HinhChuNhat(13, 14);
+    hcn2.dienTich();
+    hcn2.chuVi();
+
+</script>
+</html>

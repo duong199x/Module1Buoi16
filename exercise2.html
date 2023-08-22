@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Temperature {
+        celsius;
+
+        constructor(celsiusInput) {
+            this.celsius = celsiusInput;
+        }
+
+        convertFahrenheit() {
+            console.log('Fahrenheit: ' + (this.celsius * 1.8 + 32))
+        }
+
+        convertKevin() {
+            console.log('Kevin: ' + (this.celsius + 273.15))
+        }
+    }
+
+    let tem1 = new Temperature(25)
+    console.log(tem1.celsius)
+    tem1.convertFahrenheit();
+    tem1.convertKevin();
+</script>
+</html>
